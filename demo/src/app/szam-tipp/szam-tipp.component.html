@@ -1,1 +1,18 @@
-<p>szam-tipp works!</p>
+<div class="container w-50 bg-warning-subtle my-5 py-2">
+    <h1 class="text-center">{{Title}}</h1>
+    <div class="form-group my-2">
+        <div class="text-center py-2">
+            <label for="hint" class="fs-4">Kérem tippeljen egy egész számot 1 és 100 között!</label>
+        </div>
+        <input type="number" class="form-control w-25 mx-auto text-center" [(ngModel)]="Hint" name="hint" id="hint"
+            min="1" max="100" step="1">
+    </div>
+    <div class="d-grid d-lg-block gap-2 my-3 text-center">
+        <button type="button" class="btn btn-danger rounded-0" (click)="generateRandomNumber()">Véletlen
+            szám!</button>
+        <button type="button" class="btn btn-success rounded-0 mx-lg-2" (click)="letsPlay()">Tipp ellenőrzése!</button>
+        <button type="button" class="btn btn-primary rounded-0" (click)="newGame()">Új játék!</button>
+    </div>
+    <p class="text-center fs-5 fw-bold">{{Balance}}</p>
+    <p [style.color]="ResultColor" class="text-center fs-5 fw-semibold">{{Result}}</p>
+</div>
