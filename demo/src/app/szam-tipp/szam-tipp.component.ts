@@ -77,13 +77,13 @@ export class SzamTippComponent {
     const prize = 110;
     if (this.credit > 0) {
       if (this.hint == this.randomNumber) {
-        this.result = "A tippelt szám és a keresett szám megegyezik! Nyert!";
+        this.result = "A választott szám és a keresett szám megegyezik! Nyert!";
         this.resultColor = "#198754"; //bs-success
         this.credit += (prize - hintPrice);
         this.balance = "Pontszám: " + this.credit;
         this.generateRandomNumber()
       } else if (this.hint > this.randomNumber) {
-        this.result = "A tippelt szám nagyobb, mint a keresett szám!";
+        this.result = "A választott szám nagyobb, mint a keresett szám! Tippeljen újra!";
         this.resultColor = "#0d6efd"; //bs-primary
         this.credit -= hintPrice;
         if (this.credit <= 0) {
@@ -92,7 +92,7 @@ export class SzamTippComponent {
         }
         this.balance = "Pontszám: " + this.credit;
       } else if (this.hint < this.randomNumber) {
-        this.result = "A tippelt szám kisebb, mint a keresett szám!";
+        this.result = "A választott szám kisebb, mint a keresett szám! Tippeljen újra!";
         this.resultColor = "#0d6efd"; //bs-primary
         this.credit -= hintPrice;
         if (this.credit <= 0) {
