@@ -1,0 +1,27 @@
+body {
+    background-color: rgb(179, 112, 194);
+}
+
+.stone {
+    background-image: url('img_kopapirollo/stone.jpg');
+    height: 175px;
+    width: 250px;
+    background-position: 50% 50%;
+    border: 3px solid rgb(66, 100, 104);
+}
+
+.paper {
+    background-image: url('img_kopapirollo/paper.jpg');
+    height: 175px;
+    width: 250px;
+    background-position: 50% 50%;
+    border: 3px solid rgb(66, 100, 104);
+}
+
+.scissors {
+    background-image: url('img_kopapirollo/scissors.jpg');
+    height: 175px;
+    width: 250px;
+    background-position: 50% 50%;
+    border: 3px solid rgb(66, 100, 104);
+}
