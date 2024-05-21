@@ -1,1 +1,14 @@
-<p>stopper works!</p>
+<div class="container w-50 text-center mt-5 py-2 bg-info-subtle rounded-5 border border-secondary border-3">
+    <div class="row">
+        <div class="col-6">
+            <p class="h1 text-center">{{Title}}</p>
+             <br>
+            <P class="display-1 text-primary">{{Stopper}}</P>
+        </div>
+        <div class="col-6 btn-group-vertical gap-2">
+            <button type="button" class="btn btn-success rounded-pill" (click)="startStopper()">START</button>
+            <button type="button" class="btn btn-warning rounded-pill" (click)="stopStopper()">STOP</button>
+            <button type="button" class="btn btn-danger rounded-pill" (click)="resetStopper()">RESET</button>
+        </div>
+    </div>   
+</div>
