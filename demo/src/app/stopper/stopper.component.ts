@@ -20,8 +20,7 @@ export class StopperComponent {
   private seconds: number[] = [];
   private i: number = 0;
   private startCountSeconds: any;
-  private stopper: string = this.hours + ":" + this.minutes + ":" + this.secondStart
-
+  private stopper: string = this.hours + ":" + this.minutes + ":" + this.secondStart;
 
   public get Title(): string {
     return this.title;
@@ -114,15 +113,3 @@ export class StopperComponent {
     this.stopStopper();
   }
 }
-
-
-
-
-
-
-
-
-
-
-
-

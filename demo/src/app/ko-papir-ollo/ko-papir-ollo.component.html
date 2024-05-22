@@ -1,1 +1,59 @@
-<p>ko-papir-ollo works!</p>
+<div class="container w-75 mt-5">
+    <div class="row bg-warning-subtle mb-1 py-3 rounded-top-5">
+        <div class="col-12">
+            <h1 class="text-center text-body-secondary">{{Title}}</h1>
+        </div>
+    </div>
+
+    <div class="row bg-success-subtle pt-3 mb-1">
+        <div class="col-md-6 text-center">
+            <p class="fs-3 fw-semibold text-primary">{{ShowPoints}}</p>
+        </div>
+        <div class="col-md-6 text-center mb-3">
+            <button type="button" class="btn btn-danger w-50" (click)="newGame()">Új játék!</button>
+        </div>
+    </div>
+
+    <div class="row bg-warning-subtle pt-3 mb-1">
+        <div class="col-12 text-center">
+            <p class="fs-3 fst-italic fw-medium text-body-secondary">Válassz egyet:</p>
+        </div>
+    </div>
+
+    <div class="row bg-primary-subtle py-2 mb-1">
+        <div class="col-xl-4 col-md-6 text-center my-3">
+            <button type="button" id="hoverButtonStone" class="btn rounded-pill stone" (mouseover)="mouseOverStone()"
+                (mouseout)="mouseOutStone()" (click)="showEnemyChoice(); showMyChoiceStone(); checkWinner()">
+            </button>
+        </div>
+        <div class="col-xl-4 col-md-6 text-center my-3">
+            <button type="button" id="hoverButtonPaper" class="btn rounded-pill paper" (mouseover)="mouseOverPaper()"
+                (mouseout)="mouseOutPaper()" (click)="showEnemyChoice(); showMyChoicePaper(); checkWinner()">
+            </button>
+        </div>
+        <div class="col-xl-4 col-md-12 text-center my-3">
+            <button type="button" id="hoverButtonScissors" class="btn rounded-pill scissors"
+                (mouseover)="mouseOverScissors()" (mouseout)="mouseOutScissors()"
+                (click)="showEnemyChoice(); showMyChoiceScissors(); checkWinner()">
+            </button>
+        </div>
+    </div>
+
+    <div class="row pt-3 bg-warning-subtle fs-3 fst-italic fw-medium text-center mb-1 text-body-secondary">
+        <div class="col-6">
+            <p>A játékos választása:</p>
+        </div>
+        <div class="col-6">
+            <p>A gép választása:</p>
+        </div>
+    </div>
+
+    <div class="row bg-primary-subtle py-4 rounded-bottom-5">
+        <div class="col-6 text-center">
+            <div id="myChoice"></div>
+        </div>
+        <div class="col-6 text-center">
+            <div id="enemyChoice"></div>
+        </div>
+    </div>
+</div>
