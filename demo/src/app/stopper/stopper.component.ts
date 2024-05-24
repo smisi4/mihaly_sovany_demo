@@ -73,12 +73,13 @@ export class StopperComponent {
     this.stopper = value;
   }
 
-  public countTime() {
+  public countTime = () => {
     for (let i = 1; i <= 60; i++) {
       this.startTime++;
     }
     if (this.startTime == 60) {
       this.seconds++;
+      this.startTime = 0;
     }
     if (this.seconds == 60) {
       this.minutes++;
@@ -108,7 +109,4 @@ export class StopperComponent {
     this.stopper = this.hours + ":" + this.minutes + ":" + this.seconds;
     this.stopStopper();
   }
-
-
-
 }
